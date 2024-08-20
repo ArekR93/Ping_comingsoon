@@ -26,7 +26,7 @@ body {
 .wrapper{
     margin: 0 auto;
     width: 100%;
-    max-width: 1200px;
+    max-width: 900px;
     .header{
         padding: 2em 1em;
         display: flex;
@@ -54,6 +54,7 @@ body {
         }
     }
     .form{
+        position: relative;
         display: flex;
         flex-direction: column;
         padding: 1em;
@@ -79,6 +80,24 @@ body {
             border:none;
             border-radius: 20px;
             box-shadow: 0 5px 5px hsla(223, 87%, 63%, 0.623);
+        }
+        .error-info{
+            display: none;
+            position: absolute;
+            bottom: 60%;
+            left: 10%;
+            color:$lightRed;
+            font-style: italic;
+            font-size: .7rem;
+
+        }
+        .active{
+            margin-top: 2em;
+            display: block;
+        }
+        .error-border{
+            border: 1px solid $lightRed;
+            color:$lightRed
         }
     }
     .img-container{
@@ -115,6 +134,87 @@ body {
         text-align: center;
         font-size: .8rem;
         margin-top: 1em;
+        color:$gray;
+    }
+}
+
+
+@media (min-width:1200px){
+    .wrapper{
+        .header{
+            padding-top: 0;
+            &__logo{
+                width: 150px;
+                margin-bottom: 2em;
+                margin-top: 1em;
+            }
+            &__title{
+                margin-bottom: 1em;
+                font-size: 2.4rem;
+            }
+            &__desc{
+                font-size: 1.7rem;
+            }
+        }
+        .form{
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0;
+            &__input{
+                width: 50%;
+                margin-right: 1em;
+                margin-bottom: 0;
+                
+            }
+            
+            &__btn{
+                width: 30%;
+                margin-bottom: 0;
+                border: 1px solid $blue;
+            }
+            .error-info{
+                bottom: 5%;
+                left: 14%;
+            }
+            .active{
+                margin-top: 0;
+                display: block;
+            }
+            .error-border{
+                border: 1px solid $lightRed;
+                color:$lightRed
+            }
+        }
+        .img-container{
+            margin-top: 1em;
+            img{
+                width: 600px;
+            }
+        }
+        .sm-box{
+            display: flex;
+            margin-top: 1em;
+            justify-content: center;
+            align-items: center;
+            padding: 1em;
+            &__circle{
+                cursor: pointer;
+                transition: background-color .4s, color .4s;
+            }
+            &__circle:hover{
+                background-color:  $blue;
+                color: white;
+            }
+        }
+    
+    }
+}
+.footer{
+    &__text{
+        text-align: center;
+        font-size: .8rem;
+        margin-top: 0;
         color:$gray;
     }
 }
