@@ -1,0 +1,120 @@
+// PrimaryColors
+$blue: hsl(223, 87%, 63%);
+
+// SecondaryColors
+
+$paleBlue: hsl(223, 100%, 88%);
+$lightRed: hsl(354, 100%, 66%);
+
+// NeutralColors
+
+$gray: hsl(0, 0%, 59%);
+$veryDarkBlue: hsl(209, 33%, 12%);
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-size: 20px;
+    font-family: "Libre Franklin", sans-serif;
+}
+.wrapper{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    .header{
+        padding: 2em 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &__logo{
+            width: 70px;
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+        &__title{
+            margin-bottom: 1em;
+            font-size: 1.8rem;
+            font-weight: lighter;
+            color:$gray;
+            text-align: center;
+            &--bold{
+                font-weight: bold;
+                color:$veryDarkBlue;
+            }
+        }
+        &__desc{
+            color:$veryDarkBlue
+        }
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        &__input{
+            color: $veryDarkBlue;
+            margin-bottom: 1em;
+            padding: 1em 2em;
+            border: 1px solid $paleBlue;
+            border-radius: 20px;
+        }
+        &__input::placeholder{
+            color: $paleBlue;
+        }
+        &__input:active, &__input:focus{
+            outline-color: $veryDarkBlue ;
+            border: 1px solid $veryDarkBlue;
+        }
+        &__btn{
+            color:white;
+            background-color: $blue;
+            margin-bottom: 3em;
+            padding: 1em 2em;
+            border:none;
+            border-radius: 20px;
+            box-shadow: 0 5px 5px hsla(223, 87%, 63%, 0.623);
+        }
+    }
+    .img-container{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 300px;
+        }
+    }
+    .sm-box{
+        display: flex;
+        margin-top: 2em;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        &__circle{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: .5em;
+            border: 1px solid $paleBlue;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color:$blue;
+        }
+    }
+
+}
+.footer{
+    &__text{
+        text-align: center;
+        font-size: .8rem;
+        margin-top: 1em;
+        color:$gray;
+    }
+}
